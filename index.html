@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAMMENTA | Oltre il visibile</title>
+    <meta name="description"
+        content="Frammenta - Uno spazio dedicato alle esposizioni d'arte contemporanea e alla ricerca visiva.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Local Fonts in Assets -->
+    <!-- Barba.js & GSAP -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+
+<body data-barba="wrapper">
+
+    <div class="logo-container">
+        <h1 class="huge-title">Frammenta</h1>
+    </div>
+    <div class="sticky-nav-container">
+        <nav class="sticky-nav">
+            <div class="nav-links">
+                <div class="nav-item empty"></div>
+                <a href="index.html" class="nav-item active">PROSSIME ESPOSIZIONE</a>
+                <div class="nav-item empty"></div>
+                <a href="past.html" class="nav-item">ESPOSIZIONI PASSATE</a>
+                <div class="nav-item empty"></div>
+                <a href="about.html" class="nav-item">COS'É FRAMMENTA?</a>
+                <div class="nav-item empty"></div>
+            </div>
+        </nav>
+    </div>
+
+    <main data-barba="container" data-barba-namespace="home">
+        <div class="content-wrapper">
+            <section class="hero-section">
+                <div class="hero-grid">
+                    <div class="hero-image">
+                        <img id="heroImage" src="assets/Immagini/In Corso e next/Collage Climatico.webp"
+                            alt="Collage Climatico">
+                    </div>
+                    <div class="hero-text">
+                        <h2 id="heroTitle" class="event-title">GIULIA RONCARATO CI PORTA ALLA SCOPERTA DELLE INSIDIE DEL
+                            CAMBIAMENTO
+                            CLIMATICO</h2>
+                        <div class="event-details">
+                            <div class="detail-block">
+                                <span class="detail-label">EXHIBITION</span>
+                                <p id="heroExhibition">It engages with the idea that seeing, like looking deep into the
+                                    universe, is never
+                                    direct. What is perceived arrives filtered through time, distance, and the
+                                    accumulation of prior experience. Vision is not passive; it is shaped, influenced,
+                                    and often unconsciously interpreted before recognition takes place.</p>
+                            </div>
+                            <div class="detail-block">
+                                <span class="detail-label">ABOUT</span>
+                                <p id="heroAbout">Schisis considers how vision operates in the space between observation
+                                    and the
+                                    accumulation of prior experience. Vision is not passive; it is shaped, influenced,
+                                    and often unconsciously interpreted before recognition takes place.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="programmed-section">
+                <div class="section-header">
+                    <h2 class="section-title">PROGRAMMATE</h2>
+                    <div class="slider-nav">
+                        <button class="slider-arrow prev" id="slidePrev">&#8592;</button>
+                        <button class="slider-arrow next" id="slideNext">&#8594;</button>
+                    </div>
+                </div>
+
+                <div class="poster-slider-container">
+                    <div class="poster-grid" id="posterGrid">
+                        <div class="poster-card active" data-index="0">
+                            <img src="assets/Immagini/In Corso e next/Collage Climatico.webp" alt="Collage Climatico">
+                        </div>
+                        <div class="poster-card" data-index="1">
+                            <img src="/assets/Immagini/In Corso e next/Dizionario delle parole perdute.webp"
+                                alt="Dizionario delle parole perdute">
+                        </div>
+                        <div class="poster-card" data-index="2">
+                            <img src="/assets/Immagini/In Corso e next/Raiz Expuesta.webp" alt="Raiz Expuesta">
+                        </div>
+
+                        <div class="poster-card" data-index="3">
+                            <img src="https://placehold.co/400x600/444444/FFFFFF?text=MOSTRA+4" alt="Poster 4">
+                        </div>
+
+                        <div class="poster-card" data-index="4">
+                            <img src="https://placehold.co/400x600/555555/FFFFFF?text=MOSTRA+5" alt="Poster 5">
+                        </div>
+
+                        <div class="poster-card" data-index="5">
+                            <img src="https://placehold.co/400x600/666666/FFFFFF?text=MOSTRA+6" alt="Poster 6">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
