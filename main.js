@@ -3,7 +3,7 @@ const EXHIBITIONS = [
     {
         title: "DIZIONARIO DELLE PAROLE PERDUTE - UN VIAGGIO NEL LINGUAGGIO DIMENTICATO",
         image: "assets/Immagini/In Corso e next/Dizionario delle parole perdute.webp",
-        exhibition: "Con la sua prima pubblicazione Matilde ci racconta dell'accuratezza della nostra lingua, tramite un dizionario originale che racconta 21 termini dimenticati. Il saggio ha lo scopo di portare alla riflessione sull'importanza delle parole e sull'impatto che esse hanno sulla nostra percezione delle cose.",
+        exhibition: "Lunedì 13 aprile, alle 17, in dialogo con Irene Tapparo, il Palasavena accoglierà Matilde Ruffino con la sua prima pubblicazione. Un saggio che ci racconta dell'accuratezza della nostra lingua, tramite un dizionario originale che racconta 21 termini dimenticati. Il<strong> Dizionario delle Parole Perdute </strong> ha lo scopo di portare alla riflessione sull'importanza delle parole e sull'impatto che esse hanno sulla nostra percezione delle cose.",
         about: " <strong> Matilde Ruffino </strong>  -  nasce a Lugo (RA) e cresce sull'isola di Chioggia. Lavora su diversi medium, favorendo il fumetto. Studia Didattica e Comunicazione dell'Arte presso l'Accademia di Belle Arti di Bologna. Attualmente \" Dizionario delle Parole Perdute \" è la sua prima pubblicazione."
     },
     {
@@ -75,46 +75,85 @@ barba.init({
 });
 
 function initSlider() {
-    // Re-initialize for each section that might contain a slider
     const sections = document.querySelectorAll('section');
-    
+
     sections.forEach(section => {
         const grid = section.querySelector('.poster-grid');
         const nextBtn = section.querySelector('.slideNext');
         const prevBtn = section.querySelector('.slidePrev');
 
         if (grid && nextBtn && prevBtn) {
-            // Remove previous listeners if any (simple way for barba)
+            // Remove previous listeners
             const newNext = nextBtn.cloneNode(true);
             const newPrev = prevBtn.cloneNode(true);
             nextBtn.parentNode.replaceChild(newNext, nextBtn);
             prevBtn.parentNode.replaceChild(newPrev, prevBtn);
 
-            newNext.addEventListener('click', () => {
+            // Clean up existing clones if any (important for Barba re-init)
+            grid.querySelectorAll('.clone').forEach(c => c.remove());
+
+            const originalCards = Array.from(grid.querySelectorAll('.poster-card'));
+            if (originalCards.length < 2) return;
+
+            // Clone to both ends for seamless infinite loop
+            originalCards.forEach(card => {
+                const cloneEnd = card.cloneNode(true);
+                cloneEnd.classList.add('clone');
+                grid.appendChild(cloneEnd);
+
+                const cloneStart = card.cloneNode(true);
+                cloneStart.classList.add('clone');
+                grid.insertBefore(cloneStart, grid.firstChild);
+            });
+
+            const getMetrics = () => {
                 const card = grid.querySelector('.poster-card');
-                if (!card) return;
                 const cardWidth = card.offsetWidth;
                 const gap = parseFloat(getComputedStyle(grid).gap) || 0;
-                const scrollAmount = cardWidth + gap;
+                const step = cardWidth + gap;
+                return { step, initialOffset: step * originalCards.length };
+            };
+
+            // Set initial position
+            let { step, initialOffset } = getMetrics();
+            grid.scrollLeft = initialOffset;
+
+            // Sync on resize
+            window.addEventListener('resize', () => {
+                ({ step, initialOffset } = getMetrics());
+            });
+
+            newNext.addEventListener('click', () => {
+                if (gsap.isTweening(grid)) return;
+                ({ step, initialOffset } = getMetrics());
 
                 gsap.to(grid, {
-                    scrollLeft: grid.scrollLeft + scrollAmount,
+                    scrollLeft: grid.scrollLeft + step,
                     duration: 0.6,
-                    ease: 'power2.out'
+                    ease: "power2.out",
+                    onComplete: () => {
+                        // If we are deep into end clones, jump back to original segment
+                        if (grid.scrollLeft >= initialOffset + (step * originalCards.length)) {
+                            gsap.set(grid, { scrollLeft: initialOffset });
+                        }
+                    }
                 });
             });
 
             newPrev.addEventListener('click', () => {
-                const card = grid.querySelector('.poster-card');
-                if (!card) return;
-                const cardWidth = card.offsetWidth;
-                const gap = parseFloat(getComputedStyle(grid).gap) || 0;
-                const scrollAmount = cardWidth + gap;
+                if (gsap.isTweening(grid)) return;
+                ({ step, initialOffset } = getMetrics());
 
                 gsap.to(grid, {
-                    scrollLeft: grid.scrollLeft - scrollAmount,
+                    scrollLeft: grid.scrollLeft - step,
                     duration: 0.6,
-                    ease: 'power2.out'
+                    ease: "power2.out",
+                    onComplete: () => {
+                        // If we are deep into start clones, jump back to original segment
+                        if (grid.scrollLeft <= step * (originalCards.length - 1)) {
+                            gsap.set(grid, { scrollLeft: initialOffset + (step * (originalCards.length - 1)) });
+                        }
+                    }
                 });
             });
         }

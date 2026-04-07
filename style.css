@@ -134,6 +134,8 @@ body {
 }
 
 .hero-grid {
+    margin-top: 8rem !important;
+    margin-bottom: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -226,7 +228,7 @@ body {
     font-family: var(--font-body);
     font-size: 1.6rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
     color: #000000;
     text-transform: none;
     letter-spacing: normal;
@@ -286,6 +288,10 @@ body {
     line-height: 0.8;
 }
 
+.section-title.big {
+    font-size: 10rem;
+}
+
 .poster-slider-container {
     position: relative;
     max-width: 1400px;
@@ -342,11 +348,20 @@ body {
 /* Full Width Slider (Showcase) */
 .showcase-slider .poster-card {
     flex: 0 0 100%;
+    opacity: 1 !important;
+    cursor: default;
 }
 
 .showcase-slider .poster-card img {
-    aspect-ratio: auto;
-    max-height: 80vh;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    cursor: default;
+}
+
+.showcase-slider .poster-card:hover img {
+    transform: none !important;
 }
 
 /* Slider Arrows */
