@@ -61,7 +61,11 @@ barba.init({
                 ease: 'power2.out'
             });
 
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            gsap.to(window, {
+                scrollTo: { y: 0, autoKill: false },
+                duration: 0.6,
+                ease: "power2.out"
+            });
         }
     }]
 });
