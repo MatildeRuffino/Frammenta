@@ -1,22 +1,16 @@
 // Exhibition Data
 const EXHIBITIONS = [
     {
-        title: "GIULIA RONCARATO CI PORTA ALLA SCOPERTA DELLE INSIDIE DEL CAMBIAMENTO CLIMATICO",
-        image: "assets/Immagini/In Corso e next/Collage Climatico.webp",
-        exhibition: "It engages with the idea that seeing, like looking deep into the universe, is never direct. What is perceived arrives filtered through time, distance, and the accumulation of prior experience. Vision is not passive; it is shaped, influenced, and often unconsciously interpreted before recognition takes place.",
-        about: "Schisis considers how vision operates in the space between observation and the accumulation of prior experience. Vision is not passive; it is shaped, influenced, and often unconsciously interpreted before recognition takes place."
-    },
-    {
         title: "DIZIONARIO DELLE PAROLE PERDUTE - UN VIAGGIO NEL LINGUAGGIO DIMENTICATO",
         image: "assets/Immagini/In Corso e next/Dizionario delle parole perdute.webp",
-        exhibition: "Una mostra che esplora il potere delle parole cadute in disuso. Ogni installazione è un frammento di memoria linguistica, un tentativo di ridare vita a concetti che non hanno più un nome nel quotidiano.",
-        about: "Dizionario delle parole perdute è un progetto di ricerca visiva che unisce tipografia, installazioni sonore e arte materica per riflettere sulla fragilità della nostra cultura verbale."
+        exhibition: "Con la sua prima pubblicazione Matilde ci racconta dell'accuratezza della nostra lingua, tramite un dizionario originale che racconta 21 termini dimenticati. Il saggio ha lo scopo di portare alla riflessione sull'importanza delle parole e sull'impatto che esse hanno sulla nostra percezione delle cose.",
+        about: " <strong> Matilde Ruffino </strong>  -  nasce a Lugo (RA) e cresce sull'isola di Chioggia. Lavora su diversi medium, favorendo il fumetto. Studia Didattica e Comunicazione dell'Arte presso l'Accademia di Belle Arti di Bologna. Attualmente \" Dizionario delle Parole Perdute \" è la sua prima pubblicazione."
     },
     {
-        title: "ECODIBATTITO - IL FUTURO DELLA SOSTENIBILITA' NELL'ARTE",
+        title: "RAIZ EXPUESTA - L'IDENTITA' COME TERRITORIO FRAMMENTATO",
         image: "assets/Immagini/In Corso e next/Raiz Expuesta.webp",
-        exhibition: "Confronto tra diversi artisti sulla sostenibilità ambientale. La mostra indaga come l'arte possa fungere da catalizzatore per il cambiamento sociale e politico.",
-        about: "Ecodibattito raccoglie opere create esclusivamente con materiali riciclati, sfidando lo spettatore a riconsiderare il valore dell'oggetto e la sua persistenza nel tempo."
+        exhibition: "Venerdì 17 Aprile alle 17:00 al Palasavena presentermo <strong> \" Raíz Expuesta \" </strong>, l'esposizione personale di Carla M. Trillo N, che ci racconta dell'identità come territorio frammentato che si consuma e si trasforma stratificandosi in un corpo che diventa archivio di ogni esperienza ed emozione. L'artista intende così unire relazioni e territorio, emotività ed immigrazione, identità e paesaggio.",
+        about: "<strong>Carla M. Trillo N.</strong>  -   Nata e cresciuta a Lima, in Perù, segue una formazione nell’ambito dell’architettura durante la scuola secondaria, successivamente si avvicina verso le arti visive e studia presso la Facoltà di Arte e Design della Pontificia Universidad Católica del Perú. Attualmente vive a Bologna, dove frequenta il Triennio di Pittura presso l’Accademia di Belle Arti di Bologna."
     },
     {
         title: "MOSTRA 4 - TITOLO E DETTAGLI IN ARRIVO",
@@ -35,6 +29,12 @@ const EXHIBITIONS = [
         image: "https://placehold.co/800x1200/666666/FFFFFF?text=MOSTRA+6",
         exhibition: "Descrizione della mostra 6 in fase di caricamento. L'ultima appuntamento della stagione espositiva corrente.",
         about: "Un evento speciale per chiudere il ciclo di mostre dedicate alla ricerca sul frammento."
+    },
+    {
+        title: "MOSTRA 6 - CHIUSURA DELLA STAGIONE",
+        image: "https://placehold.co/800x1200/666666/FFFFFF?text=MOSTRA+6",
+        exhibition: "Descrizione della mostra 6 in fase di caricamento. L'ultima appuntamento della stagione espositiva corrente.",
+        about: "Un evento speciale per chiudere il ciclo di mostre dedicate alla ricerca sul frammento."
     }
 ];
 
@@ -43,6 +43,7 @@ barba.init({
     transitions: [{
         name: 'opacity-transition',
         leave(data) {
+            gsap.set(document.body, { overflow: 'hidden' });
             return gsap.to(data.current.container, {
                 opacity: 0,
                 duration: 0.3,
@@ -63,45 +64,54 @@ barba.init({
 
             gsap.to(window, {
                 scrollTo: { y: 0, autoKill: false },
-                duration: 0.6,
-                ease: "power2.out"
+                duration: 0.8, // Slightly longer for a more luxurious feel
+                ease: "power2.inOut",
+                onComplete: () => {
+                    gsap.set(document.body, { overflow: '' });
+                }
             });
         }
     }]
 });
 
 function initSlider() {
-    const grid = document.getElementById('posterGrid');
-    const nextBtn = document.getElementById('slideNext');
-    const prevBtn = document.getElementById('slidePrev');
+    const sliders = document.querySelectorAll('.poster-slider-container');
 
-    if (grid && nextBtn && prevBtn) {
-        nextBtn.addEventListener('click', () => {
-            const card = grid.querySelector('.poster-card');
-            const cardWidth = card.offsetWidth;
-            const gap = parseFloat(getComputedStyle(grid).gap) || 0;
-            const scrollAmount = cardWidth + gap;
+    sliders.forEach(container => {
+        const grid = container.querySelector('.poster-grid');
+        const nextBtn = container.querySelector('.slideNext');
+        const prevBtn = container.querySelector('.slidePrev');
 
-            gsap.to(grid, {
-                scrollLeft: grid.scrollLeft + scrollAmount,
-                duration: 0.6,
-                ease: 'power2.out'
+        if (grid && nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => {
+                const card = grid.querySelector('.poster-card');
+                if (!card) return;
+                const cardWidth = card.offsetWidth;
+                const gap = parseFloat(getComputedStyle(grid).gap) || 0;
+                const scrollAmount = cardWidth + gap;
+
+                gsap.to(grid, {
+                    scrollLeft: grid.scrollLeft + scrollAmount,
+                    duration: 0.6,
+                    ease: 'power2.out'
+                });
             });
-        });
 
-        prevBtn.addEventListener('click', () => {
-            const card = grid.querySelector('.poster-card');
-            const cardWidth = card.offsetWidth;
-            const gap = parseFloat(getComputedStyle(grid).gap) || 0;
-            const scrollAmount = cardWidth + gap;
+            prevBtn.addEventListener('click', () => {
+                const card = grid.querySelector('.poster-card');
+                if (!card) return;
+                const cardWidth = card.offsetWidth;
+                const gap = parseFloat(getComputedStyle(grid).gap) || 0;
+                const scrollAmount = cardWidth + gap;
 
-            gsap.to(grid, {
-                scrollLeft: grid.scrollLeft - scrollAmount,
-                duration: 0.6,
-                ease: 'power2.out'
+                gsap.to(grid, {
+                    scrollLeft: grid.scrollLeft - scrollAmount,
+                    duration: 0.6,
+                    ease: 'power2.out'
+                });
             });
-        });
-    }
+        }
+    });
 }
 
 function initExhibitionSwitcher() {
@@ -132,10 +142,14 @@ function switchExhibition(index) {
     const targetY = heroSection.getBoundingClientRect().top + window.scrollY - 100;
 
     // Use GSAP ScrollTo for a MUCH smoother, fluid experience
+    gsap.set(document.body, { overflow: 'hidden' });
     gsap.to(window, {
         scrollTo: { y: targetY, autoKill: false },
-        duration: 0.5,
-        ease: "power2.out"
+        duration: 0.8,
+        ease: "power2.inOut",
+        onComplete: () => {
+            gsap.set(document.body, { overflow: '' });
+        }
     });
 
     gsap.to(heroSection, {
@@ -143,10 +157,13 @@ function switchExhibition(index) {
         y: 10,
         duration: 0.3,
         onComplete: () => {
-            if (heroImage) heroImage.src = data.image;
+            if (heroImage) {
+                heroImage.src = data.image;
+                heroImage.alt = data.title;
+            }
             if (heroTitle) heroTitle.textContent = data.title;
-            if (heroExhibition) heroExhibition.textContent = data.exhibition;
-            if (heroAbout) heroAbout.textContent = data.about;
+            if (heroExhibition) heroExhibition.innerHTML = data.exhibition;
+            if (heroAbout) heroAbout.innerHTML = data.about;
 
             gsap.to(heroSection, {
                 opacity: 1,
