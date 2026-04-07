@@ -8,13 +8,13 @@ const EXHIBITIONS = [
     },
     {
         title: "DIZIONARIO DELLE PAROLE PERDUTE - UN VIAGGIO NEL LINGUAGGIO DIMENTICATO",
-        image: "/assets/Immagini/In Corso e next/Dizionario delle parole perdute.webp",
+        image: "assets/Immagini/In Corso e next/Dizionario delle parole perdute.webp",
         exhibition: "Una mostra che esplora il potere delle parole cadute in disuso. Ogni installazione è un frammento di memoria linguistica, un tentativo di ridare vita a concetti che non hanno più un nome nel quotidiano.",
         about: "Dizionario delle parole perdute è un progetto di ricerca visiva che unisce tipografia, installazioni sonore e arte materica per riflettere sulla fragilità della nostra cultura verbale."
     },
     {
         title: "ECODIBATTITO - IL FUTURO DELLA SOSTENIBILITA' NELL'ARTE",
-        image: "/assets/Immagini/In Corso e next/Raiz Expuesta.webp",
+        image: "assets/Immagini/In Corso e next/Raiz Expuesta.webp",
         exhibition: "Confronto tra diversi artisti sulla sostenibilità ambientale. La mostra indaga come l'arte possa fungere da catalizzatore per il cambiamento sociale e politico.",
         about: "Ecodibattito raccoglie opere create esclusivamente con materiali riciclati, sfidando lo spettatore a riconsiderare il valore dell'oggetto e la sua persistenza nel tempo."
     },
