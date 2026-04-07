@@ -64,7 +64,7 @@ barba.init({
 
             gsap.to(window, {
                 scrollTo: { y: 0, autoKill: false },
-                duration: 0.8, // Slightly longer for a more luxurious feel
+                duration: 0.4,
                 ease: "power2.inOut",
                 onComplete: () => {
                     gsap.set(document.body, { overflow: '' });
@@ -75,15 +75,22 @@ barba.init({
 });
 
 function initSlider() {
-    const sliders = document.querySelectorAll('.poster-slider-container');
-
-    sliders.forEach(container => {
-        const grid = container.querySelector('.poster-grid');
-        const nextBtn = container.querySelector('.slideNext');
-        const prevBtn = container.querySelector('.slidePrev');
+    // Re-initialize for each section that might contain a slider
+    const sections = document.querySelectorAll('section');
+    
+    sections.forEach(section => {
+        const grid = section.querySelector('.poster-grid');
+        const nextBtn = section.querySelector('.slideNext');
+        const prevBtn = section.querySelector('.slidePrev');
 
         if (grid && nextBtn && prevBtn) {
-            nextBtn.addEventListener('click', () => {
+            // Remove previous listeners if any (simple way for barba)
+            const newNext = nextBtn.cloneNode(true);
+            const newPrev = prevBtn.cloneNode(true);
+            nextBtn.parentNode.replaceChild(newNext, nextBtn);
+            prevBtn.parentNode.replaceChild(newPrev, prevBtn);
+
+            newNext.addEventListener('click', () => {
                 const card = grid.querySelector('.poster-card');
                 if (!card) return;
                 const cardWidth = card.offsetWidth;
@@ -97,7 +104,7 @@ function initSlider() {
                 });
             });
 
-            prevBtn.addEventListener('click', () => {
+            newPrev.addEventListener('click', () => {
                 const card = grid.querySelector('.poster-card');
                 if (!card) return;
                 const cardWidth = card.offsetWidth;
@@ -145,7 +152,7 @@ function switchExhibition(index) {
     gsap.set(document.body, { overflow: 'hidden' });
     gsap.to(window, {
         scrollTo: { y: targetY, autoKill: false },
-        duration: 0.8,
+        duration: 0.4,
         ease: "power2.inOut",
         onComplete: () => {
             gsap.set(document.body, { overflow: '' });
