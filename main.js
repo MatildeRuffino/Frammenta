@@ -89,76 +89,45 @@ function initSlider() {
             nextBtn.parentNode.replaceChild(newNext, nextBtn);
             prevBtn.parentNode.replaceChild(newPrev, prevBtn);
 
-            // Clean up existing clones if any (important for Barba re-init)
+            // Clean up existing clones if any
             grid.querySelectorAll('.clone').forEach(c => c.remove());
 
-            const originalCards = Array.from(grid.querySelectorAll('.poster-card'));
-            if (originalCards.length < 2) return;
-
-            // Clone to both ends for seamless infinite loop
-            originalCards.forEach(card => {
-                const cloneEnd = card.cloneNode(true);
-                cloneEnd.classList.add('clone');
-                grid.appendChild(cloneEnd);
-
-                const cloneStart = card.cloneNode(true);
-                cloneStart.classList.add('clone');
-                grid.insertBefore(cloneStart, grid.firstChild);
+            // Prevent image dragging
+            grid.querySelectorAll('img').forEach(img => {
+                img.setAttribute('draggable', 'false');
             });
 
             const getMetrics = () => {
                 const card = grid.querySelector('.poster-card');
+                if (!card) return { step: 0 };
                 const cardWidth = card.offsetWidth;
                 const gap = parseFloat(getComputedStyle(grid).gap) || 0;
-                const step = cardWidth + gap;
-                return { step, initialOffset: step * originalCards.length };
+                return { step: cardWidth + gap };
             };
-
-            // Set initial position
-            let { step, initialOffset } = getMetrics();
-            grid.scrollLeft = initialOffset;
-
-            // Sync on resize
-            window.addEventListener('resize', () => {
-                ({ step, initialOffset } = getMetrics());
-            });
 
             newNext.addEventListener('click', () => {
                 if (gsap.isTweening(grid)) return;
-                ({ step, initialOffset } = getMetrics());
-
+                const { step } = getMetrics();
                 gsap.to(grid, {
                     scrollLeft: grid.scrollLeft + step,
                     duration: 0.6,
-                    ease: "power2.out",
-                    onComplete: () => {
-                        // If we are deep into end clones, jump back to original segment
-                        if (grid.scrollLeft >= initialOffset + (step * originalCards.length)) {
-                            gsap.set(grid, { scrollLeft: initialOffset });
-                        }
-                    }
+                    ease: "power2.out"
                 });
             });
 
             newPrev.addEventListener('click', () => {
                 if (gsap.isTweening(grid)) return;
-                ({ step, initialOffset } = getMetrics());
-
+                const { step } = getMetrics();
                 gsap.to(grid, {
                     scrollLeft: grid.scrollLeft - step,
                     duration: 0.6,
-                    ease: "power2.out",
-                    onComplete: () => {
-                        // If we are deep into start clones, jump back to original segment
-                        if (grid.scrollLeft <= step * (originalCards.length - 1)) {
-                            gsap.set(grid, { scrollLeft: initialOffset + (step * (originalCards.length - 1)) });
-                        }
-                    }
+                    ease: "power2.out"
                 });
             });
         }
     });
 }
+
 
 function initExhibitionSwitcher() {
     const posterCards = document.querySelectorAll('.poster-card');
