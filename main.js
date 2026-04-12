@@ -58,6 +58,17 @@ barba.init({
             initExhibitionSwitcher();
             initLightbox();
 
+            // Instant scroll between exit and entry
+            const goingBackToPast = data.next.namespace === 'past' &&
+                data.current.namespace === 'exhibition';
+
+            if (goingBackToPast) {
+                window.scrollTo(0, savedPastScrollY);
+            } else {
+                window.scrollTo(0, 0);
+            }
+            gsap.set(document.body, { overflow: '' });
+
             gsap.from(data.next.container, {
                 opacity: 0,
                 y: 10,
@@ -65,26 +76,6 @@ barba.init({
                 ease: 'power2.out',
                 clearProps: "all"
             });
-
-            // Restore scroll when going back to past exhibitions
-            const goingBackToPast = data.next.namespace === 'past' &&
-                data.current.namespace === 'exhibition';
-
-            if (goingBackToPast) {
-                gsap.set(document.body, { overflow: '' });
-                requestAnimationFrame(() => {
-                    window.scrollTo(0, savedPastScrollY);
-                });
-            } else {
-                gsap.to(window, {
-                    scrollTo: { y: 0, autoKill: false },
-                    duration: 0.4,
-                    ease: "power2.inOut",
-                    onComplete: () => {
-                        gsap.set(document.body, { overflow: '' });
-                    }
-                });
-            }
         }
     }]
 });
