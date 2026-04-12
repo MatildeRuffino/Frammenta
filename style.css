@@ -385,7 +385,7 @@ body {
 
 /* Full Width Slider (Showcase) */
 .showcase-slider .poster-grid {
-    padding: 2rem 0 4rem; /* Added padding for shadows */
+    padding: 1rem 0 3rem; /* reduced top padding */
 }
 
 .showcase-slider .poster-card {
@@ -749,7 +749,7 @@ body {
     }
 
     .showcase-slider .poster-grid {
-        padding: 1rem 1.5rem 2rem;
+        padding: 0.5rem 1.5rem 2rem;
     }
 
 
