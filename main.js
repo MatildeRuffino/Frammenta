@@ -49,6 +49,7 @@ barba.init({
             updateActiveLink(data.next.url.path);
             initSlider();
             initExhibitionSwitcher();
+            initLightbox();
 
             gsap.from(data.next.container, {
                 opacity: 0,
@@ -196,7 +197,71 @@ function updateActiveLink(path) {
     });
 }
 
+function initLightbox() {
+    // Create lightbox if not exists
+    let lightbox = document.querySelector('.lightbox');
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-close">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </div>
+            <div class="lightbox-content">
+                <img src="" alt="">
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        // Close events
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.closest('.lightbox-close')) {
+                lightbox.classList.remove('active');
+                setTimeout(() => {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 400);
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                setTimeout(() => {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 400);
+            }
+        });
+    }
+
+    // Attach to images
+    const images = document.querySelectorAll('.showcase-slider .poster-card img, .hero-image img, .sub-hero-image img');
+    images.forEach(img => {
+        // Remove old listeners by cloning (simple way to avoid duplicates)
+        const newImg = img.cloneNode(true);
+        img.parentNode.replaceChild(newImg, img);
+
+        newImg.addEventListener('click', (e) => {
+            e.preventDefault();
+            const src = newImg.getAttribute('src');
+            const lightboxImg = lightbox.querySelector('img');
+            lightboxImg.src = src;
+            
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                lightbox.classList.add('active');
+            }, 10);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initSlider();
     initExhibitionSwitcher();
+    initLightbox();
 });
