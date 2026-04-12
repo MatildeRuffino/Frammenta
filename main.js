@@ -241,13 +241,12 @@ function initLightbox() {
     // Attach to images
     const images = document.querySelectorAll('.showcase-slider .poster-card img, .hero-image img, .sub-hero-image img');
     images.forEach(img => {
-        // Remove old listeners by cloning (simple way to avoid duplicates)
-        const newImg = img.cloneNode(true);
-        img.parentNode.replaceChild(newImg, img);
+        if (img.dataset.lightboxAttached) return;
+        img.dataset.lightboxAttached = "true";
 
-        newImg.addEventListener('click', (e) => {
+        img.addEventListener('click', (e) => {
             e.preventDefault();
-            const src = newImg.getAttribute('src');
+            const src = img.getAttribute('src');
             const lightboxImg = lightbox.querySelector('img');
             lightboxImg.src = src;
             

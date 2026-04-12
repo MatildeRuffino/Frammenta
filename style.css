@@ -717,6 +717,44 @@ body {
     .poster-card {
         flex: 0 0 80%;
     }
+
+    .showcase-slider .poster-card {
+        flex: 0 0 85%;
+    }
+
+    .back-btn {
+        width: 45px;
+        height: 45px;
+        top: 1rem;
+        margin-left: 1rem;
+        margin-bottom: -45px;
+    }
+
+    .back-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .section-title.big {
+        font-size: 15vw;
+    }
+
+    .showcase-section {
+        padding: 0;
+    }
+
+    .showcase-section .section-header {
+        margin: 0 1.5rem 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .showcase-slider .poster-grid {
+        padding: 1rem 1.5rem 2rem;
+    }
+
+
+
+
 }
 
 @media (max-width: 480px) {
