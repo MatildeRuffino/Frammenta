@@ -3,14 +3,14 @@ const EXHIBITIONS = [
     {
         title: "DIZIONARIO DELLE PAROLE PERDUTE - UN VIAGGIO NEL LINGUAGGIO DIMENTICATO",
         image: "assets/Immagini/In Corso e next/Dizionario delle parole perdute.webp",
-        exhibition: "Lunedì 13 aprile, alle 17, in dialogo con Irene Tapparo, il Palasavena accoglierà Matilde Ruffino con la sua prima pubblicazione. Un saggio che ci racconta dell'accuratezza della nostra lingua, tramite un dizionario originale che racconta 21 termini dimenticati. Il<strong> Dizionario delle Parole Perdute </strong> ha lo scopo di portare alla riflessione sull'importanza delle parole e sull'impatto che esse hanno sulla nostra percezione delle cose.",
-        about: " <strong> Matilde Ruffino </strong>  -  nasce a Lugo (RA) e cresce sull'isola di Chioggia. Lavora su diversi medium, favorendo il fumetto. Studia Didattica e Comunicazione dell'Arte presso l'Accademia di Belle Arti di Bologna. Attualmente \" Dizionario delle Parole Perdute \" è la sua prima pubblicazione."
+        exhibition: "Lunedì 13 aprile, alle 17:00, il Palasavena ospiterà la presentazione della prima opera editoriale di Matilde Ruffino, in dialogo con Irene Tapparo. Il saggio racconta l'accuratezza della nostra lingua, attraverso un originale repertorio di ventuno termini dimenticati. Il <strong>Dizionario delle Parole Perdute</strong> nasce con l’intento di stimolare una riflessione sul valore delle parole e sull'impatto che esse hanno sulla nostra percezione delle cose.",
+        about: " <strong> Matilde Ruffino </strong> - nasce a Lugo (RA) e cresce sull'isola di Chioggia. Attualmente vive a in provincia di Bologna e studia Didattica e Comunicazione dell'Arte presso l'Accademia di Belle Arti. Sperimenta diversi medium, favorendo il mondo dell’illustrazione, in particolare il fumetto. \"Dizionario delle Parole Perdute\" è la sua prima pubblicazione."
     },
     {
         title: "RAIZ EXPUESTA - L'IDENTITA' COME TERRITORIO FRAMMENTATO",
         image: "assets/Immagini/In Corso e next/Raiz Expuesta.webp",
         exhibition: "Venerdì 17 Aprile alle 17:00 al Palasavena presentermo <strong> \" Raíz Expuesta \" </strong>, l'esposizione personale di Carla M. Trillo N, che ci racconta dell'identità come territorio frammentato che si consuma e si trasforma stratificandosi in un corpo che diventa archivio di ogni esperienza ed emozione. L'artista intende così unire relazioni e territorio, emotività ed immigrazione, identità e paesaggio.",
-        about: "<strong>Carla M. Trillo N.</strong>  -   Nata e cresciuta a Lima, in Perù, segue una formazione nell’ambito dell’architettura durante la scuola secondaria, successivamente si avvicina verso le arti visive e studia presso la Facoltà di Arte e Design della Pontificia Universidad Católica del Perú. Attualmente vive a Bologna, dove frequenta il Triennio di Pittura presso l’Accademia di Belle Arti di Bologna."
+        about: "<strong>Carla M. Trillo N.</strong> - nata e cresciuta a Lima, in Perù, consegue una formazione nell’ambito dell’architettura durante la scuola secondaria. Successivamente si avvicina alle arti visive e studia presso la Facoltà di Arte e Design della Pontificia Universidad Católica del Perú. Attualmente vive a Bologna, dove frequenta il Triennio di Pittura presso l’Accademia di Belle Arti."
     },
     {
         title: "TOO BIG FOR HOME",
@@ -23,13 +23,13 @@ const EXHIBITIONS = [
         title: "INDOCILI ORIZZONTI",
         image: "assets/Immagini/In Corso e next/Orizzonti.webp",
         exhibition: "Domenica 3 Maggio il Palasavena ospiterà <strong> Indocili Orizzonti </strong>, una mostra personale di Arianna Lazzari, dove una natura senza controllo, un mondo composto da energie spontanee che si riflettono nelle dinamiche emotive umane vengono rappresentate da una tecnica destinata al continuo mutamento: l’olio di lino usato per le opere, ingiallendo e cambiando nel tempo, riapre lo sguardo a nuove possibilità di lettura. Da anni l’artista porta avanti una ricerca segnica capace di riverberare nel vissuto di ciascuno: un gesto che delinea l’emozione e afferma l’intensità del vivere, liberandosi in un flusso che cerca il proprio spazio sulla superficie del supporto. Prendendo le mosse dal pittore italiano G. Novelli (1925-1968), secondo cui è essenziale «[…]dimenticare tutto ciò che si è appreso di equilibrio e conoscenza affinché l’atto creativo riacquisti la sua spontaneità[…]».",
-        about: "Diplomata all’Accademia di Belle Arti di Bologna, <strong> Arianna Lazzari </strong> è interessata al segno che diventa gesto vivo, traccia sensibile che attraversa la superficie. Il suo intento principale è trarre spunti dalla realtà, così da esplorarne le profondità e le ambiguità, trasformandole in visioni cariche di emozione e in nuovi orizzonti interiori."
+        about: "<strong>Arianna Lazzari</strong> - Diplomata all’Accademia di Belle Arti di Bologna, è interessata al segno che diventa gesto vivo, traccia sensibile che attraversa la superficie. Il suo intento principale è trarre spunti dalla realtà, così da esplorarne le profondità e le ambiguità, trasformandole in visioni cariche di emozione e in nuovi orizzonti interiori."
     },
     {
         title: "L'ESTATE DI GIORGIONE",
         image: "assets/Immagini/In Corso e next/L’ESTATE DI GIORGIONE.webp",
         exhibition: "Giovedì 21 Maggio alle 17:00 il Palasavena ospiterà <strong>L’estate di Giorgione</strong>, una serie fotografica documentativa realizzata nell’estate del 2023, durante la camminata collettiva “La Marcia al Mare”, con partenza da Piacenza per arrivare alla costa ligure. Il progetto, organizzato dall’associazione OtpGea, accompagna un gruppo di adolescenti attraverso le valli e gli Appennini, con l’obiettivo di facilitare la creazione di nuovi legami e di esperienze uniche e incoraggiare così la crescita personale. Questa raccolta, nonostante ritragga momenti di gioia, cela un segreto che avvolge l’intero lavoro di un’atmosfera malinconica.",
-        about: "<strong>Eugenio Bengalli</strong>, nato a Fiorenzuola d’Arda nel 2001, si forma presso il Liceo Artistico Bruno Cassinari di Piacenza. Successivamente svolge un periodo di praticantato con il collettivo Cesura, esperienza che consolida le sue basi nella fotografia. Attualmente è studente all’Accademia di Belle Arti di Bologna, dove collabora con collettivi artistici interni come Bar-H e PLai. La sua ricerca fotografica indaga restituendo visibilità a persone, comunità e contesti marginali, portando alla luce narrazioni spesso trascurate nel tessuto sociale contemporaneo."
+        about: "<strong>Eugenio Bengalli</strong> - nato a Fiorenzuola d’Arda nel 2001, si forma presso il Liceo Artistico Bruno Cassinari di Piacenza. Successivamente svolge un periodo di praticantato con il collettivo Cesura, esperienza che consolida le sue basi nella fotografia. Attualmente è studente all’Accademia di Belle Arti di Bologna, dove collabora con collettivi artistici interni come Bar-H e PLai. La sua ricerca fotografica indaga restituendo visibilità a persone, comunità e contesti marginali, portando alla luce narrazioni spesso trascurate nel tessuto sociale contemporaneo."
     }
 ];
 
@@ -130,7 +130,7 @@ function initSlider() {
                 const { step } = getMetrics();
                 gsap.to(grid, {
                     scrollLeft: grid.scrollLeft + step,
-                    duration: 0.6,
+                    duration: 0.3,
                     ease: "power2.out"
                 });
             });
@@ -140,7 +140,7 @@ function initSlider() {
                 const { step } = getMetrics();
                 gsap.to(grid, {
                     scrollLeft: grid.scrollLeft - step,
-                    duration: 0.6,
+                    duration: 0.3,
                     ease: "power2.out"
                 });
             });
@@ -265,8 +265,7 @@ function initLightbox() {
     const images = document.querySelectorAll(
         '.showcase-section .poster-card img,' +
         ' .story-cover img,' +
-        ' .hero-image img,' +
-        ' .programmed-section .poster-card img'
+        ' .hero-image img'
     );
     images.forEach(img => {
         if (img.dataset.lightboxAttached) return;
@@ -277,7 +276,7 @@ function initLightbox() {
             const src = img.getAttribute('src');
             const lightboxImg = lightbox.querySelector('img');
             lightboxImg.src = src;
-            
+
             lightbox.style.display = 'flex';
             document.body.style.overflow = 'hidden';
             setTimeout(() => {

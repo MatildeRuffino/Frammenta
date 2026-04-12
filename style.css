@@ -378,8 +378,8 @@ body {
 
 .poster-card img {
     width: 100%;
-    aspect-ratio: 2/3;
-    object-fit: cover;
+    aspect-ratio: auto;
+    object-fit: contain;
     display: block;
     transition: transform 0.5s var(--ease);
 }
