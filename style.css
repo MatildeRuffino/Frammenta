@@ -309,6 +309,13 @@ body {
     align-items: flex-end;
 }
 
+/* Story header matches section-header spacing exactly */
+.story-header {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
 .section-title {
     font-family: var(--font-heading);
     font-size: 6.5rem;
@@ -385,7 +392,7 @@ body {
 
 /* Full Width Slider (Showcase) */
 .showcase-slider .poster-grid {
-    padding: 1rem 0 3rem; /* reduced top padding */
+    padding: 0 0 2rem;
 }
 
 .showcase-slider .poster-card {
@@ -731,7 +738,16 @@ body {
     }
 
     .section-title.big {
-        font-size: 22vw;
+        font-size: 15vw;
+    }
+
+    /* Global rule: all section/story headers get consistent mobile spacing */
+    .section-header,
+    .story-header {
+        margin-bottom: 1rem !important;
+        padding-bottom: 1rem !important;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .poster-card {
@@ -755,25 +771,18 @@ body {
         height: 18px;
     }
 
-    .section-title.big {
-        font-size: 15vw;
-    }
-
     .showcase-section {
         padding: 0;
     }
 
     .showcase-section .section-header {
-        margin: 0 1.5rem 1rem;
-        padding-bottom: 1rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 
     .showcase-slider .poster-grid {
-        padding: 0.5rem 1.5rem 2rem;
+        padding: 0 1.5rem 1.5rem;
     }
-
-
-
 
 }
 
@@ -803,7 +812,7 @@ body {
 }
 
 .story-header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 2rem;
 }

@@ -33,11 +33,18 @@ const EXHIBITIONS = [
     }
 ];
 
+// Scroll position memory for past.html
+let savedPastScrollY = 0;
+
 // Initialize Barba.js
 barba.init({
     transitions: [{
         name: 'opacity-transition',
         leave(data) {
+            // Save scroll position when leaving past.html
+            if (data.current.namespace === 'past') {
+                savedPastScrollY = window.scrollY;
+            }
             gsap.set(document.body, { overflow: 'hidden' });
             return gsap.to(data.current.container, {
                 opacity: 0,
@@ -59,12 +66,15 @@ barba.init({
                 clearProps: "all"
             });
 
-            // Don't reset scroll when going back to past exhibitions list
-            const goingBackToPast = data.next.url.path.includes('past.html') &&
+            // Restore scroll when going back to past exhibitions
+            const goingBackToPast = data.next.namespace === 'past' &&
                 data.current.namespace === 'exhibition';
 
             if (goingBackToPast) {
                 gsap.set(document.body, { overflow: '' });
+                requestAnimationFrame(() => {
+                    window.scrollTo(0, savedPastScrollY);
+                });
             } else {
                 gsap.to(window, {
                     scrollTo: { y: 0, autoKill: false },
@@ -246,8 +256,8 @@ function initLightbox() {
         });
     }
 
-    // Attach to images
-    const images = document.querySelectorAll('.showcase-slider .poster-card img, .hero-image img, .sub-hero-image img');
+    // Attach to showcase + story cover images (not programmed-section posters)
+    const images = document.querySelectorAll('.showcase-section .poster-card img, .story-cover img, .story-cover-img');
     images.forEach(img => {
         if (img.dataset.lightboxAttached) return;
         img.dataset.lightboxAttached = "true";
