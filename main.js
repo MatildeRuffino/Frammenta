@@ -13,28 +13,23 @@ const EXHIBITIONS = [
         about: "<strong>Carla M. Trillo N.</strong>  -   Nata e cresciuta a Lima, in Perù, segue una formazione nell’ambito dell’architettura durante la scuola secondaria, successivamente si avvicina verso le arti visive e studia presso la Facoltà di Arte e Design della Pontificia Universidad Católica del Perú. Attualmente vive a Bologna, dove frequenta il Triennio di Pittura presso l’Accademia di Belle Arti di Bologna."
     },
     {
-        title: "MOSTRA 4 - TITOLO E DETTAGLI IN ARRIVO",
-        image: "https://placehold.co/800x1200/444444/FFFFFF?text=MOSTRA+4",
-        exhibition: "Descrizione della mostra 4 in fase di caricamento. Frammenta continua la sua ricerca verso nuovi orizzonti dell'arte contemporanea.",
-        about: "Restate sintonizzati per scoprire i dettagli di questa nuova esposizione presso i nostri spazi."
+        title: "TOO BIG FOR HOME",
+        image: "assets/Immagini/In Corso e next/TOO BIG FOR HOME.webp",
+        exhibition: "Venerdì 24 aprile alle 18:00, il Palasavena ospiterà <strong> \" Too Big For Home \" </strong>, mostra personale di Giulia Mazzoli. L’esposizione si configura come un’indagine sulla memoria intesa come luogo interiore, frammentato e soggetto a costante rielaborazione. Fulcro della ricerca dell’artista risiede in particolar modo nel recupero nostalgico dell’infanzia, indagandone le complesse dinamiche emotive. Il tutto avviene all’interno dello spazio domestico: un luogo ambivalente, sospeso tra il conforto della familiarità e l’inquietudine dello smarrimento."
+        ,
+        about: "<strong>Giulia Mazzoli</strong> - nata in provincia di Firenze, ha conseguito la formazione secondaria presso il Liceo Artistico Alberti-Dante. Attualmente prosegue il proprio percorso accademico a Bologna, dove frequente il triennio di Pittura presso l’Accademia di Belle Arti. La sua pratica artistica indaga le dinamiche della memoria e della nostalgia, articolandosi attraverso una sperimentazione multimediale che spazia dalla fotografia all’installazione, fino all’utilizzo di tessuti e dell’uncinetto."
     },
     {
-        title: "MOSTRA 5 - PROSSIMAMENTE A FRAMMENTA",
-        image: "https://placehold.co/800x1200/555555/FFFFFF?text=MOSTRA+5",
-        exhibition: "Descrizione della mostra 5 in fase di caricamento. Una nuova prospettiva sulla visione e sulla percezione.",
-        about: "Dettagli sull'artista e sulla ricerca curatoriale verranno pubblicati a breve."
+        title: "INDOCILI ORIZZONTI",
+        image: "assets/Immagini/In Corso e next/Orizzonti.webp",
+        exhibition: "Domenica 3 Maggio il Palasavena ospiterà <strong> Indocili Orizzonti </strong>, una mostra personale di Arianna Lazzari, dove una natura senza controllo, un mondo composto da energie spontanee che si riflettono nelle dinamiche emotive umane vengono rappresentate da una tecnica destinata al continuo mutamento: l’olio di lino usato per le opere, ingiallendo e cambiando nel tempo, riapre lo sguardo a nuove possibilità di lettura. Da anni l’artista porta avanti una ricerca segnica capace di riverberare nel vissuto di ciascuno: un gesto che delinea l’emozione e afferma l’intensità del vivere, liberandosi in un flusso che cerca il proprio spazio sulla superficie del supporto. Prendendo le mosse dal pittore italiano G. Novelli (1925-1968), secondo cui è essenziale «[…]dimenticare tutto ciò che si è appreso di equilibrio e conoscenza affinché l’atto creativo riacquisti la sua spontaneità[…]».",
+        about: "Diplomata all’Accademia di Belle Arti di Bologna, <strong> Arianna Lazzari </strong> è interessata al segno che diventa gesto vivo, traccia sensibile che attraversa la superficie. Il suo intento principale è trarre spunti dalla realtà, così da esplorarne le profondità e le ambiguità, trasformandole in visioni cariche di emozione e in nuovi orizzonti interiori."
     },
     {
-        title: "MOSTRA 6 - CHIUSURA DELLA STAGIONE",
-        image: "https://placehold.co/800x1200/666666/FFFFFF?text=MOSTRA+6",
-        exhibition: "Descrizione della mostra 6 in fase di caricamento. L'ultima appuntamento della stagione espositiva corrente.",
-        about: "Un evento speciale per chiudere il ciclo di mostre dedicate alla ricerca sul frammento."
-    },
-    {
-        title: "MOSTRA 6 - CHIUSURA DELLA STAGIONE",
-        image: "https://placehold.co/800x1200/666666/FFFFFF?text=MOSTRA+6",
-        exhibition: "Descrizione della mostra 6 in fase di caricamento. L'ultima appuntamento della stagione espositiva corrente.",
-        about: "Un evento speciale per chiudere il ciclo di mostre dedicate alla ricerca sul frammento."
+        title: "L'ESTATE DI GIORGIONE",
+        image: "assets/Immagini/In Corso e next/L’ESTATE DI GIORGIONE.webp",
+        exhibition: "Giovedì 21 Maggio alle 17:00 il Palasavena ospiterà <strong>L’estate di Giorgione</strong>, una serie fotografica documentativa realizzata nell’estate del 2023, durante la camminata collettiva “La Marcia al Mare”, con partenza da Piacenza per arrivare alla costa ligure. Il progetto, organizzato dall’associazione OtpGea, accompagna un gruppo di adolescenti attraverso le valli e gli Appennini, con l’obiettivo di facilitare la creazione di nuovi legami e di esperienze uniche e incoraggiare così la crescita personale. Questa raccolta, nonostante ritragga momenti di gioia, cela un segreto che avvolge l’intero lavoro di un’atmosfera malinconica.",
+        about: "<strong>Eugenio Bengalli</strong>, nato a Fiorenzuola d’Arda nel 2001, si forma presso il Liceo Artistico Bruno Cassinari di Piacenza. Successivamente svolge un periodo di praticantato con il collettivo Cesura, esperienza che consolida le sue basi nella fotografia. Attualmente è studente all’Accademia di Belle Arti di Bologna, dove collabora con collettivi artistici interni come Bar-H e PLai. La sua ricerca fotografica indaga restituendo visibilità a persone, comunità e contesti marginali, portando alla luce narrazioni spesso trascurate nel tessuto sociale contemporaneo."
     }
 ];
 
@@ -59,7 +54,8 @@ barba.init({
                 opacity: 0,
                 y: 10,
                 duration: 0.4,
-                ease: 'power2.out'
+                ease: 'power2.out',
+                clearProps: "all"
             });
 
             gsap.to(window, {

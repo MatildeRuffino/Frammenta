@@ -442,9 +442,10 @@ body {
 
 /* Floating Back Button */
 .back-btn {
-    position: fixed;
+    position: sticky;
     top: 2rem;
-    left: 2rem;
+    margin-left: 2rem;
+    margin-bottom: -60px;
     z-index: 1000;
     width: 60px;
     height: 60px;
