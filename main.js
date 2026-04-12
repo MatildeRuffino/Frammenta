@@ -89,6 +89,11 @@ barba.init({
     }]
 });
 
+// Safety net: always release body overflow after any transition completes
+barba.hooks.after(() => {
+    document.body.style.overflow = '';
+});
+
 function initSlider() {
     const sections = document.querySelectorAll('section');
 
@@ -256,8 +261,13 @@ function initLightbox() {
         });
     }
 
-    // Attach to showcase + story cover images (not programmed-section posters)
-    const images = document.querySelectorAll('.showcase-section .poster-card img, .story-cover img, .story-cover-img');
+    // Lightbox: showcase, story extras, locandina/poster — NOT the sub-hero banner
+    const images = document.querySelectorAll(
+        '.showcase-section .poster-card img,' +
+        ' .story-cover img,' +
+        ' .hero-image img,' +
+        ' .programmed-section .poster-card img'
+    );
     images.forEach(img => {
         if (img.dataset.lightboxAttached) return;
         img.dataset.lightboxAttached = "true";

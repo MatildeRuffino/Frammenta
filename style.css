@@ -299,30 +299,41 @@ body {
 
 
 
-.section-header {
+/* Global Header/Divider System */
+.section-header,
+.story-header,
+.edition-header,
+.about-header {
     max-width: 1400px;
     margin: 0 auto 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-/* Story header matches section-header spacing exactly */
-.story-header {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
+/* Specific adjustments */
+.edition-header {
+    margin-top: 6rem;
 }
 
-.section-title {
+.story-header,
+.about-header {
+    display: block; /* These don't have side-nav buttons usually */
+}
+
+.section-title,
+.story-title,
+.edition-title,
+.about-title {
     font-family: var(--font-heading);
     font-size: 6.5rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-weight: 500;
     line-height: 0.8;
+    margin: 0;
 }
 
 .section-title.big {
@@ -547,13 +558,6 @@ body {
 
 }
 
-.edition-header {
-    border-bottom: 1.5px solid var(--border-color);
-    padding-bottom: 2rem;
-    margin-bottom: 3rem;
-    margin-top: 6rem;
-}
-
 .edition-title {
     font-family: var(--font-heading);
     font-size: 6.5rem;
@@ -732,22 +736,32 @@ body {
         padding: 2rem 1rem;
     }
 
-    .section-title {
-        font-size: 11vw;
-        line-height: 1;
+    .section-title,
+    .story-title,
+    .edition-title,
+    .about-title {
+        font-size: 11vw !important;
+        line-height: 1 !important;
     }
 
     .section-title.big {
-        font-size: 15vw;
+        font-size: 15vw !important;
     }
 
-    /* Global rule: all section/story headers get consistent mobile spacing */
+    /* Global rule: all headers get consistent mobile spacing */
     .section-header,
-    .story-header {
+    .story-header,
+    .edition-header,
+    .about-header {
         margin-bottom: 1rem !important;
         padding-bottom: 1rem !important;
         padding-left: 0;
         padding-right: 0;
+        display: block; /* Stack title and nav if present */
+    }
+
+    .edition-header {
+        margin-top: 3rem;
     }
 
     .poster-card {
@@ -811,18 +825,7 @@ body {
     margin: 0 auto;
 }
 
-.story-header {
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 2rem;
-}
-
 .story-title {
-    font-family: var(--font-heading);
-    font-size: 6.5rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: 1;
     color: var(--text-color);
 }
 
@@ -871,10 +874,6 @@ body {
         grid-template-columns: 1fr;
         gap: 4rem;
     }
-
-    .story-title {
-        font-size: 6rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -898,18 +897,7 @@ body {
     margin: 0 auto;
 }
 
-.about-header {
-    margin-bottom: 3.5rem;
-    border-bottom: 1.5px solid var(--border-color);
-    padding-bottom: 2rem;
-}
-
 .about-title {
-    font-family: var(--font-heading);
-    font-size: 5.5rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: 0.9;
     color: var(--text-color);
 }
 
@@ -1031,6 +1019,17 @@ body {
 .poster-card img {
     cursor: zoom-in;
 }
+
+/* Sub-hero banner is NOT clickable */
+.sub-hero-image img {
+    cursor: default;
+}
+
+/* Locandina/poster is clickable */
+.hero-image img {
+    cursor: zoom-in;
+}
+
 
 
 /* Responsive About */
