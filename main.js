@@ -59,14 +59,22 @@ barba.init({
                 clearProps: "all"
             });
 
-            gsap.to(window, {
-                scrollTo: { y: 0, autoKill: false },
-                duration: 0.4,
-                ease: "power2.inOut",
-                onComplete: () => {
-                    gsap.set(document.body, { overflow: '' });
-                }
-            });
+            // Don't reset scroll when going back to past exhibitions list
+            const goingBackToPast = data.next.url.path.includes('past.html') &&
+                data.current.namespace === 'exhibition';
+
+            if (goingBackToPast) {
+                gsap.set(document.body, { overflow: '' });
+            } else {
+                gsap.to(window, {
+                    scrollTo: { y: 0, autoKill: false },
+                    duration: 0.4,
+                    ease: "power2.inOut",
+                    onComplete: () => {
+                        gsap.set(document.body, { overflow: '' });
+                    }
+                });
+            }
         }
     }]
 });

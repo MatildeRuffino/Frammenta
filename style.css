@@ -392,6 +392,7 @@ body {
     flex: 0 0 100%;
     opacity: 1 !important;
     cursor: default;
+    overflow: hidden;
 }
 
 .showcase-slider .poster-card img {
@@ -407,6 +408,25 @@ body {
 .showcase-slider .poster-card:hover img {
     transform: none !important;
 }
+
+/* Triple image slide: 3 vertical photos side by side */
+.showcase-slider .poster-card--triple {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.showcase-slider .poster-card--triple img {
+    flex: 1;
+    width: 0;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: unset;
+    border: solid 1px #e5e5e5;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    cursor: zoom-in;
+}
+
 
 /* Slider Arrows */
 .slider-nav {
