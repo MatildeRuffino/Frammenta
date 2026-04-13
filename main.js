@@ -13,20 +13,20 @@ const EXHIBITIONS = [
         about: "<strong>Carla M. Trillo N.</strong> - nata e cresciuta a Lima, in Perù, consegue una formazione nell’ambito dell’architettura durante la scuola secondaria. Successivamente si avvicina alle arti visive e studia presso la Facoltà di Arte e Design della Pontificia Universidad Católica del Perú. Attualmente vive a Bologna, dove frequenta il Triennio di Pittura presso l’Accademia di Belle Arti."
     },
     {
-        title: "TOO BIG FOR HOME",
+        title: "TOO BIG FOR HOME - LA CASA TRA FAMILIARITÀ E SMARRIMENTO",
         image: "assets/Immagini/In Corso e next/TOO BIG FOR HOME.webp",
         exhibition: "Venerdì 24 aprile alle 18:00, il Palasavena ospiterà <strong> \" Too Big For Home \" </strong>, mostra personale di Giulia Mazzoli. L’esposizione si configura come un’indagine sulla memoria intesa come luogo interiore, frammentato e soggetto a costante rielaborazione. Fulcro della ricerca dell’artista risiede in particolar modo nel recupero nostalgico dell’infanzia, indagandone le complesse dinamiche emotive. Il tutto avviene all’interno dello spazio domestico: un luogo ambivalente, sospeso tra il conforto della familiarità e l’inquietudine dello smarrimento."
         ,
         about: "<strong>Giulia Mazzoli</strong> - nata in provincia di Firenze, ha conseguito la formazione secondaria presso il Liceo Artistico Alberti-Dante. Attualmente prosegue il proprio percorso accademico a Bologna, dove frequente il triennio di Pittura presso l’Accademia di Belle Arti. La sua pratica artistica indaga le dinamiche della memoria e della nostalgia, articolandosi attraverso una sperimentazione multimediale che spazia dalla fotografia all’installazione, fino all’utilizzo di tessuti e dell’uncinetto."
     },
     {
-        title: "INDOCILI ORIZZONTI",
+        title: "INDOCILI ORIZZONTI - DOVE IL SEGNO DIVENTA ENERGIA E IL GESTO SI FA EMOZIONE",
         image: "assets/Immagini/In Corso e next/Orizzonti.webp",
         exhibition: "Domenica 3 Maggio il Palasavena ospiterà <strong> Indocili Orizzonti </strong>, una mostra personale di Arianna Lazzari, dove una natura senza controllo, un mondo composto da energie spontanee che si riflettono nelle dinamiche emotive umane vengono rappresentate da una tecnica destinata al continuo mutamento: l’olio di lino usato per le opere, ingiallendo e cambiando nel tempo, riapre lo sguardo a nuove possibilità di lettura. Da anni l’artista porta avanti una ricerca segnica capace di riverberare nel vissuto di ciascuno: un gesto che delinea l’emozione e afferma l’intensità del vivere, liberandosi in un flusso che cerca il proprio spazio sulla superficie del supporto. Prendendo le mosse dal pittore italiano G. Novelli (1925-1968), secondo cui è essenziale «[…]dimenticare tutto ciò che si è appreso di equilibrio e conoscenza affinché l’atto creativo riacquisti la sua spontaneità[…]».",
         about: "<strong>Arianna Lazzari</strong> - Diplomata all’Accademia di Belle Arti di Bologna, è interessata al segno che diventa gesto vivo, traccia sensibile che attraversa la superficie. Il suo intento principale è trarre spunti dalla realtà, così da esplorarne le profondità e le ambiguità, trasformandole in visioni cariche di emozione e in nuovi orizzonti interiori."
     },
     {
-        title: "L'ESTATE DI GIORGIONE",
+        title: "L'ESTATE DI GIORGIONE - LA MARCIA AL MARE E IL RACCONTO DI QUEL PAESE",
         image: "assets/Immagini/In Corso e next/L’ESTATE DI GIORGIONE.webp",
         exhibition: "Giovedì 21 Maggio alle 17:00 il Palasavena ospiterà <strong>L’estate di Giorgione</strong>, una serie fotografica documentativa realizzata nell’estate del 2023, durante la camminata collettiva “La Marcia al Mare”, con partenza da Piacenza per arrivare alla costa ligure. Il progetto, organizzato dall’associazione OtpGea, accompagna un gruppo di adolescenti attraverso le valli e gli Appennini, con l’obiettivo di facilitare la creazione di nuovi legami e di esperienze uniche e incoraggiare così la crescita personale. Questa raccolta, nonostante ritragga momenti di gioia, cela un segreto che avvolge l’intero lavoro di un’atmosfera malinconica.",
         about: "<strong>Eugenio Bengalli</strong> - nato a Fiorenzuola d’Arda nel 2001, si forma presso il Liceo Artistico Bruno Cassinari di Piacenza. Successivamente svolge un periodo di praticantato con il collettivo Cesura, esperienza che consolida le sue basi nella fotografia. Attualmente è studente all’Accademia di Belle Arti di Bologna, dove collabora con collettivi artistici interni come Bar-H e PLai. La sua ricerca fotografica indaga restituendo visibilità a persone, comunità e contesti marginali, portando alla luce narrazioni spesso trascurate nel tessuto sociale contemporaneo."
