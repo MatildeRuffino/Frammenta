@@ -1,12 +1,6 @@
 // Exhibition Data
 const EXHIBITIONS = [
     {
-        title: "DIZIONARIO DELLE PAROLE PERDUTE - UN VIAGGIO NEL LINGUAGGIO DIMENTICATO",
-        image: "assets/Immagini/In Corso e next/Dizionario delle parole perdute.webp",
-        exhibition: "Lunedì 13 aprile, alle 17:00, il Palasavena ospiterà la presentazione della prima opera editoriale di Matilde Ruffino, in dialogo con Irene Tapparo. Il saggio racconta l'accuratezza della nostra lingua, attraverso un originale repertorio di ventuno termini dimenticati. Il <strong>Dizionario delle Parole Perdute</strong> nasce con l’intento di stimolare una riflessione sul valore delle parole e sull'impatto che esse hanno sulla nostra percezione delle cose.",
-        about: " <strong> Matilde Ruffino </strong> - nasce a Lugo (RA) e cresce sull'isola di Chioggia. Attualmente vive a in provincia di Bologna e studia Didattica e Comunicazione dell'Arte presso l'Accademia di Belle Arti. Sperimenta diversi medium, favorendo il mondo dell’illustrazione, in particolare il fumetto. \"Dizionario delle Parole Perdute\" è la sua prima pubblicazione."
-    },
-    {
         title: "RAIZ EXPUESTA - L'IDENTITA' COME TERRITORIO FRAMMENTATO",
         image: "assets/Immagini/In Corso e next/Raiz Expuesta.webp",
         exhibition: "Venerdì 17 Aprile alle 17:00 al Palasavena presentermo <strong> \" Raíz Expuesta \" </strong>, l'esposizione personale di Carla M. Trillo N, che ci racconta dell'identità come territorio frammentato che si consuma e si trasforma stratificandosi in un corpo che diventa archivio di ogni esperienza ed emozione. L'artista intende così unire relazioni e territorio, emotività ed immigrazione, identità e paesaggio.",
@@ -142,6 +136,14 @@ function initSlider() {
 
 function initExhibitionSwitcher() {
     const posterCards = document.querySelectorAll('.poster-card');
+
+    // Auto-populate first exhibition if we are on home
+    if (EXHIBITIONS.length > 0 && document.getElementById('heroTitle')) {
+        populateHero(0);
+        // Also mark first card as active
+        if (posterCards.length > 0) posterCards[0].classList.add('active');
+    }
+
     posterCards.forEach(card => {
         card.addEventListener('click', () => {
             const index = card.getAttribute('data-index');
@@ -152,6 +154,24 @@ function initExhibitionSwitcher() {
             }
         });
     });
+}
+
+function populateHero(index) {
+    const data = EXHIBITIONS[index];
+    if (!data) return;
+
+    const heroImage = document.getElementById('heroImage');
+    const heroTitle = document.getElementById('heroTitle');
+    const heroExhibition = document.getElementById('heroExhibition');
+    const heroAbout = document.getElementById('heroAbout');
+
+    if (heroImage) {
+        heroImage.src = data.image;
+        heroImage.alt = data.title;
+    }
+    if (heroTitle) heroTitle.textContent = data.title;
+    if (heroExhibition) heroExhibition.innerHTML = data.exhibition;
+    if (heroAbout) heroAbout.innerHTML = data.about;
 }
 
 function switchExhibition(index) {
