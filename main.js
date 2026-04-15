@@ -7,7 +7,7 @@ const EXHIBITIONS = [
         about: "<strong>Carla M. Trillo N.</strong> - nata e cresciuta a Lima, in Perù, consegue una formazione nell’ambito dell’architettura durante la scuola secondaria. Successivamente si avvicina alle arti visive e studia presso la Facoltà di Arte e Design della Pontificia Universidad Católica del Perú. Attualmente vive a Bologna, dove frequenta il Triennio di Pittura presso l’Accademia di Belle Arti."
     },
     {
-        title: "TOO BIG FOR HOME - LA CASA TRA FAMILIARITÀ E SMARRIMENTO",
+        title: "TOO BIG FOR HOME - LA CASA TRA FAMILIARITA' E SMARRIMENTO",
         image: "assets/Immagini/In Corso e next/TOO BIG FOR HOME.webp",
         exhibition: "Venerdì 24 aprile alle 18:00, il Palasavena ospiterà <strong> \" Too Big For Home \" </strong>, mostra personale di Giulia Mazzoli. L’esposizione si configura come un’indagine sulla memoria intesa come luogo interiore, frammentato e soggetto a costante rielaborazione. Fulcro della ricerca dell’artista risiede in particolar modo nel recupero nostalgico dell’infanzia, indagandone le complesse dinamiche emotive. Il tutto avviene all’interno dello spazio domestico: un luogo ambivalente, sospeso tra il conforto della familiarità e l’inquietudine dello smarrimento."
         ,
