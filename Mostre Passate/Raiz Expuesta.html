@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíz Expuesta | FRAMMENTA</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- Barba.js & GSAP -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+
+<body data-barba="wrapper">
+
+    <main data-barba="container" data-barba-namespace="exhibition">
+        <a href="../past.html" class="back-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div class="content-wrapper">
+            <!-- Hero Image -->
+            <div class="sub-hero-image">
+                <img src="../assets/Immagini/Passate/Raiz Expuesta/head.webp" alt="Raíz Expuesta Hero">
+            </div>
+
+            <!-- Page Title -->
+            <section class="hero-section" style="padding-top: 20px;">
+                <h2 class="section-title big" style="margin-bottom: 2rem">Raíz Expuesta</h2>
+
+                <div class="hero-grid">
+                    <div class="hero-image">
+                        <img src="../assets/Immagini/In Corso e next/Raiz Expuesta.webp" alt="Raíz Expuesta Poster">
+                    </div>
+                    <div class="hero-text">
+                        <div class="event-details column" style="gap:28px">
+                            <div class="detail-block">
+                                <h3 class="detail-title">La mostra</h3>
+                                <p><strong>Raíz Expuesta</strong> presenta la ricerca di Trillo sulla memoria, intesa
+                                    come organismo instabile, e l’identità come territorio frammentato.</p>
+                                <p style="margin-top: 0rem;">Il suo lavoro artistico nasce dall'esigenza di dare forma a
+                                    ciò che non si lascia tradurre, abitando una costante ambivalenza tra il sentimento
+                                    di appartenenza ed estraneità ad un luogo.</p>
+                                <p style="margin-top: 1rem;">L’esperienza migratoria è intesa non come una rottura, ma
+                                    come un processo generativo di nuove configurazioni identitarie. Attraverso l'uso di
+                                    archivi fotografici personali, l'artista raccoglie frammenti che si trasformano nel
+                                    tempo, rendendo talvolta indistinguibile il confine tra reale e immaginato. In
+                                    questa pratica, il corpo si fa archivio e superficie sensibile su cui si inscrivono
+                                    traiettorie geografiche ed emotive. Il paesaggio naturale offre un punto di
+                                    ancoraggio, dove forme organiche come radici e filamenti creano una continuità tra
+                                    l’umano e il naturale.</p>
+                                <p style="margin-top: 1rem;">Le tecniche scelte riflettono questa complessità. Il
+                                    transfer fotografico evoca il mutamento dell'immagine nel passaggio tra superfici,
+                                    mentre il filo funge da radice e cicatrice, attraversando la ferita senza
+                                    nasconderla.</p>
+                                <p style="margin-top: 0rem;">Il progetto culmina nella metafora della radice esposta: un
+                                    simbolo di vulnerabilità e resilienza che, pur sradicato dal contesto d'origine,
+                                    continua a crescere e ad adattarsi in nuovi territori.</p>
+                            </div>
+                            <div class="detail-block">
+                                <h3 class="detail-title">L'artista</h3>
+                                <p><strong>Carla Marianna Trillo Novoa</strong> — nata e cresciuta a Lima, in Perù,
+                                    consegue una formazione nell’ambito dell’architettura durante la scuola secondaria.
+                                </p>
+                                <p style="margin-top: 0rem;">Successivamente si avvicina alle arti visive e studia
+                                    presso la Facoltà di Arte e Design della Pontificia Universidad Católica del Perú.
+                                    Attualmente vive a Bologna, dove frequenta il Triennio di Pittura presso l’Accademia
+                                    di Belle Arti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Showcase Section -->
+            <section class="showcase-section">
+                <div class="section-header">
+                    <h2 class="section-title">SHOWCASE</h2>
+                </div>
+
+                <div class="poster-slider-container showcase-slider">
+                    <button class="slider-arrow prev slidePrev side-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <button class="slider-arrow next slideNext side-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="poster-grid">
+                        <div class="poster-card active">
+                            <img src="../assets/Immagini/Passate/Raiz Expuesta/1.webp" alt="Showcase 1">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Raiz Expuesta/2.webp" alt="Showcase 2">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Raiz Expuesta/3.webp" alt="Showcase 3">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Raiz Expuesta/4.webp" alt="Showcase 4">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Raiz Expuesta/5.webp" alt="Showcase 5">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Raiz Expuesta/7.webp" alt="Showcase 7">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Raiz Expuesta/8.webp" alt="Showcase 8">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Raiz Expuesta/9.webp" alt="Showcase 9">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Extra Section -->
+            <section class="story-section">
+                <div class="story-header">
+                    <h2 class="story-title">EXTRA</h2>
+                </div>
+                <div class="story-content" style="gap: 2.5rem;">
+                    <div class="story-cover">
+                        <img src="../assets/Immagini/Passate/Raiz Expuesta/Extra.webp" alt="Extra Poem"
+                            style="aspect-ratio: 2/3; object-fit: cover;">
+                    </div>
+                    <div class="story-text">
+                        <h3 class="detail-title">PROSA SENZA TITOLO</h3>
+
+                        <div id="poem-it" class="poem-content">
+                            <p style="font-size: 0.95rem;">Passo ciascuna delle mie dita lungo i solchi delle mie
+                                braccia e memorizzo la
+                                corteccia.<br>
+                                Dura e aspra.<br>
+                                Come se la pelle avesse deciso di diventare albero prima che carne.<br>
+                                Dalle mie labbra secche affiorano radici che mi lacerano la gola.<br>
+                                Umide e ancora con l’odore di una terra che non abito più.<br>
+                                Le assaporo anche se mi fanno male.<br>
+                                Disperate, cercano di affondare in questo nuovo suolo.<br>
+                                Le accarezzo.<br>
+                                Mi si inumidiscono gli occhi, ma non distolgo lo sguardo da loro.<br>
+                                Ricordo quando uscivano ancora delicatamente dai miei talloni.<br>
+                                Voglio consolarle, ma le parole restano bloccate nel mio ventre insieme alla loro
+                                origine.<br>
+                                Non mi resta altro che osservare mentre tentano di interrarsi dove non c’è posto per
+                                loro.<br>
+                                Non capiscono che qui l’umidità è diversa, il terreno è arido, l’aria non è la
+                                stessa.<br>
+                                Tutto è pieno di una polvere estranea che non ci lascia respirare.<br>
+                                Non capiscono che, se sono state strappate, c’è un perché.<br>
+                                Insisto.<br>
+                                Loro lottano più che mai.<br>
+                                Ma ci arrendiamo.<br>
+                                Mi alzo e cammino.<br>
+                                Sento come si staccano dal territorio e volano con me.<br>
+                                La brezza le fa danzare contro il mio mento.<br>
+                                Ricordo loro l’odore della mia terra, senza pretendere che quella che calpesto sia
+                                uguale<br>
+                                e mi concedono un cavitá per respirare.<br>
+                                Mi muovo con paura.<br>
+                                Non voglio perderle, ma col tempo mi accorgo che,<br>
+                                pur non essendo sotto terra, continuano a crescere.<br>
+                                Si intrecciano tra i miei capelli, mi abbracciano il seno, mi sostengono la schiena
+                                e<br>
+                                lentamente, scendono lungo le mie gambe come se fossero fili vivi.<br>
+                                La mia pelle, col tempo, si indurisce sempre di più e devo cercarle con lo sguardo.<br>
+                                Sono ogni volta più lunghe, così lunghe che raccolgono la polvere del cammino.<br>
+                                Si contaminano con la terra che calpesto.<br>
+                                Col tempo hanno smesso di fare male, anche se a volte una di loro mi perfora il petto
+                                quando il passato mi ipnotizza.</p>
+                        </div>
+
+                        <div id="poem-es" class="poem-content" style="display: none;">
+                            <p style="font-size: 0.95rem;">Paso cada uno de mis dedos en los surcos de mis brazos y
+                                memorizo la corteza.<br>
+                                Dura y áspera.<br>
+                                Como si la piel hubiera decidido volverse árbol antes que carne.<br>
+                                De mis labios secos se asoman raíces que me desgarra la garganta.<br>
+                                Húmedas y todavía con el olor de una tierra que ya no habito.<br>
+                                Las saboreo aunque me duelan.<br>
+                                Desesperadas, intentan hundirse en este nuevo suelo.<br>
+                                Las acaricio.<br>
+                                Se me humedecen los ojos, ma non les quito la mirada de encima.<br>
+                                Recuerdo cuando todavía salían delicadamente de mis talones.<br>
+                                Quiero consolarlas, ma le parole se quedan atoradas en mi vientre, junto con su
+                                origen.<br>
+                                No me queda otra alternativa que observarlas intentar enterrarse donde no hay lugar para
+                                ellas.<br>
+                                No entienden que aquí la humedad es diferente, el suelo es árido, el aire no es el
+                                mismo.<br>
+                                Todo está lleno de un polvo ajeno que no nos deja respirar.<br>
+                                No entienden que si fueron arrancadas, hay un por qué.<br>
+                                Insisto.<br>
+                                Ellas luchan más que nunca.<br>
+                                Pero nos rendimos.<br>
+                                Me levanto y camino.<br>
+                                Siento como se desprenden del territorio y vuelan conmigo.<br>
+                                La brisa las hace bailar contro il mio mento.<br>
+                                Les recuerdo el olor de mi tierra, sin exigirle a la que piso que sea igual<br>
+                                y me ceden un agujero para respirar.<br>
+                                Me muevo con miedo.<br>
+                                No quiero perderlas, ma, con el tiempo me doy cuenta que,<br>
+                                a pesar de no estar bajo tierra siguen creciendo.<br>
+                                Se enredan entre mis cabellos, me abrazan los senos, me sostienen la espalda y,<br>
+                                lentamente, bajan por mis piernas como si fueran hilos vivi.<br>
+                                Mi piel, con el tempo, si indurece cada vez más y tengo che buscarlas con la mirada.<br>
+                                Cada vez están más largas, tan largas che recogen il polvo del cammino.<br>
+                                Se contaminan con la tierra che piso.<br>
+                                Con il tempo han dejado de doler, anche se a volte una di loro mi perfora il petto
+                                quando il passato mi ipnotizza.</p>
+                        </div>
+
+                        <div class="artist-link-wrapper" style="margin-top: 2rem; justify-content: flex-start;">
+                            <a href="javascript:void(0)" id="lang-toggle" class="btn-outline">Mostra in lingua
+                                originale</a>
+                        </div>
+
+                        <script>
+                            document.getElementById('lang-toggle').addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const poemIt = document.getElementById('poem-it');
+                                const poemEs = document.getElementById('poem-es');
+                                const isIt = poemIt.style.display !== 'none';
+
+                                if (isIt) {
+                                    poemIt.style.display = 'none';
+                                    poemEs.style.display = 'block';
+                                    this.textContent = 'Mostra traduzione in italiano';
+                                } else {
+                                    poemIt.style.display = 'block';
+                                    poemEs.style.display = 'none';
+                                    this.textContent = 'Mostra in lingua originale';
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

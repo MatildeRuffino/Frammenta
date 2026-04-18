@@ -1,12 +1,6 @@
 // Exhibition Data
 const EXHIBITIONS = [
     {
-        title: "RAIZ EXPUESTA - L'IDENTITA' COME TERRITORIO FRAMMENTATO",
-        image: "assets/Immagini/In Corso e next/Raiz Expuesta.webp",
-        exhibition: "Venerdì 17 Aprile alle 17:00 al Palasavena presentermo <strong> \" Raíz Expuesta \" </strong>, l'esposizione personale di Carla M. Trillo N, che ci racconta dell'identità come territorio frammentato che si consuma e si trasforma stratificandosi in un corpo che diventa archivio di ogni esperienza ed emozione. L'artista intende così unire relazioni e territorio, emotività ed immigrazione, identità e paesaggio.",
-        about: "<strong>Carla M. Trillo N.</strong> - nata e cresciuta a Lima, in Perù, consegue una formazione nell’ambito dell’architettura durante la scuola secondaria. Successivamente si avvicina alle arti visive e studia presso la Facoltà di Arte e Design della Pontificia Universidad Católica del Perú. Attualmente vive a Bologna, dove frequenta il Triennio di Pittura presso l’Accademia di Belle Arti."
-    },
-    {
         title: "TOO BIG FOR HOME - LA CASA TRA FAMILIARITA' E SMARRIMENTO",
         image: "assets/Immagini/In Corso e next/TOO BIG FOR HOME.webp",
         exhibition: "Venerdì 24 aprile alle 18:00, il Palasavena ospiterà <strong> \" Too Big For Home \" </strong>, mostra personale di Giulia Mazzoli. L’esposizione si configura come un’indagine sulla memoria intesa come luogo interiore, frammentato e soggetto a costante rielaborazione. Fulcro della ricerca dell’artista risiede in particolar modo nel recupero nostalgico dell’infanzia, indagandone le complesse dinamiche emotive. Il tutto avviene all’interno dello spazio domestico: un luogo ambivalente, sospeso tra il conforto della familiarità e l’inquietudine dello smarrimento."
@@ -110,12 +104,17 @@ function initSlider() {
                 return { step: cardWidth + gap };
             };
 
+            // Disable browser smooth scroll to avoid conflicts with GSAP
+            grid.style.scrollBehavior = 'auto';
+
             newNext.addEventListener('click', () => {
                 if (gsap.isTweening(grid)) return;
                 const { step } = getMetrics();
+                // Round current scroll to nearest step to avoid accumulation errors
+                const currentPos = Math.round(grid.scrollLeft / step) * step;
                 gsap.to(grid, {
-                    scrollLeft: grid.scrollLeft + step,
-                    duration: 0.3,
+                    scrollLeft: currentPos + step,
+                    duration: 0.4,
                     ease: "power2.out"
                 });
             });
@@ -123,9 +122,10 @@ function initSlider() {
             newPrev.addEventListener('click', () => {
                 if (gsap.isTweening(grid)) return;
                 const { step } = getMetrics();
+                const currentPos = Math.round(grid.scrollLeft / step) * step;
                 gsap.to(grid, {
-                    scrollLeft: grid.scrollLeft - step,
-                    duration: 0.3,
+                    scrollLeft: currentPos - step,
+                    duration: 0.4,
                     ease: "power2.out"
                 });
             });
