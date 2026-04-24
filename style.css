@@ -305,7 +305,7 @@ body {
 .edition-header,
 .about-header {
     max-width: 1400px;
-    margin: 0 auto 2rem;
+    margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
     display: flex;
@@ -320,7 +320,8 @@ body {
 
 .story-header,
 .about-header {
-    display: block; /* These don't have side-nav buttons usually */
+    display: block;
+    /* These don't have side-nav buttons usually */
 }
 
 .section-title,
@@ -756,7 +757,8 @@ body {
         padding-bottom: 1rem !important;
         padding-left: 0;
         padding-right: 0;
-        display: block; /* Stack title and nav if present */
+        display: block;
+        /* Stack title and nav if present */
     }
 
     .edition-header {
@@ -942,12 +944,15 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.contact-group a {
+.contact-group a,
+.credit-item {
     font-family: var(--font-body);
     font-size: 1.1rem;
     text-decoration: none;
     color: var(--text-color);
     transition: opacity 0.3s ease;
+    line-height: 1.4;
+    margin: 0;
 }
 
 .contact-group a:hover {
@@ -996,7 +1001,8 @@ body {
     max-width: 100%;
     max-height: 90vh;
     object-fit: contain;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Slightly stronger for the dark theme */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* Slightly stronger for the dark theme */
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1031,11 +1037,28 @@ body {
 
 
 
+/* About Footer (Credits) */
+.about-footer {
+    margin-top: 12rem;
+}
+
+.about-footer .about-header {
+    margin-bottom: 4rem;
+}
+
+.credits-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 6rem;
+}
+
+/* Handled by global .contact-group and .contact-label styles */
+
 /* Responsive About */
 @media (max-width: 1024px) {
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 3rem;
     }
 
     .about-title {
@@ -1045,6 +1068,34 @@ body {
     .about-sidebar {
         margin-top: 0;
     }
+
+    .about-footer {
+        margin-top: 6rem;
+    }
+
+    .credits-wrapper {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .contact-group {
+        gap: 0rem
+    }
+}
+
+.about-sidebar .contact-label,
+.about-footer .contact-label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: normal;
+    opacity: 1;
+}
+
+.about-sidebar .contact-group a,
+.about-footer .credit-item {
+    font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
@@ -1056,7 +1107,13 @@ body {
         font-size: 3.5rem;
     }
 
-    .contact-label {
+    .about-sidebar .contact-label,
+    .about-footer .contact-label {
         font-size: 1.2rem;
+    }
+
+    .about-sidebar .contact-group a,
+    .about-footer .credit-item {
+        font-size: 1.1rem;
     }
 }
