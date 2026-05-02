@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Too Big For Home | FRAMMENTA</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- Barba.js & GSAP -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+
+<body data-barba="wrapper">
+
+    <main data-barba="container" data-barba-namespace="exhibition">
+        <a href="../past.html" class="back-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div class="content-wrapper">
+            <!-- Hero Image -->
+            <div class="sub-hero-image">
+                <img src="../assets/Immagini/Passate/Too big for home/head.webp" alt="Hero Image">
+            </div>
+
+            <!-- Page Title -->
+            <section class="hero-section" style="padding-top: 0;">
+                <h2 class="section-title big" style="margin-bottom: 2rem;">TOO BIG FOR HOME</h2>
+
+                <div class="hero-grid">
+                    <div class="hero-image">
+                        <img src="../assets/Immagini/Passate/Too big for home/locandina.webp" alt="Exhibition Poster">
+                    </div>
+                    <div class="hero-text">
+                        <div class="event-details column">
+                            <div class="detail-block">
+                                <h3 class="detail-title">La mostra</h3>
+                                <p>Giulia Mazzoli elegge la memoria a cardine della propria ricerca, interpretandola come una materia viva, plastica e stratificata, in grado di mutare sé stessa e ciò che abita.
+Partendo da frammenti del proprio vissuto, la sua indagine assume una tensione psicanalitica, focalizzandosi sul ricordo nostalgico dell’infanzia: un territorio intimo quanto ambiguo. In questo processo, la memoria smette di essere oggetto di analisi per farsi materiale di lavoro, rivelandosi nella sua natura paradossale, al contempo effimera e permanente.<br><br>
+L’artista sperimenta con vari medium, ognuno scelto per le sue specifiche qualità sensoriali, capaci di evocare il passato attraverso sfumature differenti e di generare possibilità narrative sempre nuove.
+Gli oggetti vintage, <i>objets trouvés</i>, diventano strumenti che, attraverso il gesto artistico, svelano le storie latenti in essi racchiuse. Per l'artista, infatti, il passato non è un elemento da riscoprire, ma la forza plasmatrice che segna indelebilmente l’identità di ogni individuo. <br><br>
+La mostra <i>Too big for Home</i> si configura come un'esplorazione del legame tra immagini perdute e <i>memoria emotiva</i>, indagando le tracce lasciate dal ricordo. Le opere oscillano costantemente sul confine tra memorie reali e immaginarie, invitando lo spettatore a interrogarsi sul limite labile che separa la permanenza dalla sparizione.
+Il titolo richiama la dimensione domestica come luogo esistenziale: un rifugio accogliente a cui tornare e allo stesso tempo luogo perturbante <i>(Unheimlich)</i> da cui scappare, uno spazio ambivalente sospeso tra <i>familiarità e smarrimento</i>.
+Ogni lavoro rappresenta il tentativo di dare corpo a ciò che non ha più una collocazione fisica, restituendo visibilità a tutto ciò che è rimasto sospeso tra la nitidezza del ricordo e la sua inesorabile dissolvenza.</p>
+                                <p style="margin-top: 1rem;"></p>
+                            </div>
+                            <div class="detail-block">
+                                <h3 class="detail-title">L'artista</h3>
+                                <p>Giulia Mazzoli — nata in provincia di Firenze, si diploma al Liceo Artistico Alberti-Dante. Attualmente vive a Bologna, dove frequente il triennio di Pittura presso l’Accademia di Belle Arti. La sua pratica artistica indaga le dinamiche della memoria e della nostalgia, articolandosi attraverso una sperimentazione multimediale che spazia dalla fotografia all’installazione, fino all’utilizzo di tessuti e dell’uncinetto.</p>
+                                <p style="margin-top: 1rem;"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Showcase Section -->
+            <section class="showcase-section">
+                <div class="section-header">
+                    <h2 class="section-title">SHOWCASE</h2>
+                </div>
+
+                <div class="poster-slider-container showcase-slider">
+                    <!-- Showcase Navigation (Side-by-side) -->
+                    <button class="slider-arrow prev slidePrev side-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <button class="slider-arrow next slideNext side-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="poster-grid">
+                        <div class="poster-card active">
+                            <img src="../assets/Immagini/Passate/Too big for home/1.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Too big for home/2.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Too big for home/3.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Too big for home/4.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Too big for home/5.webp" alt="">
+                        </div>
+                         <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Too big for home/6.webp" alt="">
+                        </div>
+                         <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Too big for home/7.webp" alt="">
+                        </div>
+                         <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Too big for home/8.webp" alt="">
+                        </div>
+                         <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Too big for home/9.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
