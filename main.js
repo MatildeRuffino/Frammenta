@@ -3,7 +3,7 @@ const EXHIBITIONS = [
 
     {
         title: "INDOCILI ORIZZONTI - DOVE IL SEGNO DIVENTA ENERGIA E IL GESTO SI FA EMOZIONE",
-        image: "assets/Immagini/In Corso e next/Orizzonti.webp",
+        image: "assets/Immagini/Passate/Indocili Orizzonti/extra.webp",
         exhibition: "Domenica 3 Maggio il Palasavena ospiterà <strong> Indocili Orizzonti </strong>, una mostra personale di Arianna Lazzari, dove una natura senza controllo, un mondo composto da energie spontanee che si riflettono nelle dinamiche emotive umane vengono rappresentate da una tecnica destinata al continuo mutamento: l’olio di lino usato per le opere, ingiallendo e cambiando nel tempo, riapre lo sguardo a nuove possibilità di lettura. Da anni l’artista porta avanti una ricerca segnica capace di riverberare nel vissuto di ciascuno: un gesto che delinea l’emozione e afferma l’intensità del vivere, liberandosi in un flusso che cerca il proprio spazio sulla superficie del supporto. Prendendo le mosse dal pittore italiano G. Novelli (1925-1968), secondo cui è essenziale «[…]dimenticare tutto ciò che si è appreso di equilibrio e conoscenza affinché l’atto creativo riacquisti la sua spontaneità[…]».",
         about: "<strong>Arianna Lazzari</strong> - Diplomata all’Accademia di Belle Arti di Bologna, è interessata al segno che diventa gesto vivo, traccia sensibile che attraversa la superficie. Il suo intento principale è trarre spunti dalla realtà, così da esplorarne le profondità e le ambiguità, trasformandole in visioni cariche di emozione e in nuovi orizzonti interiori."
     },

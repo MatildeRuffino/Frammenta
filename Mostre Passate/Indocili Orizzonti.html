@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indocili Orizzonti | FRAMMENTA</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- Barba.js & GSAP -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+
+<body data-barba="wrapper">
+
+    <main data-barba="container" data-barba-namespace="exhibition">
+        <a href="../past.html" class="back-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div class="content-wrapper">
+            <!-- Hero Image -->
+            <div class="sub-hero-image">
+                <img src="../assets/Immagini/Passate/Indocili Orizzonti/head.webp" alt="Hero Image">
+            </div>
+
+            <!-- Page Title -->
+            <section class="hero-section" style="padding-top: 0;">
+                <h2 class="section-title big" style="margin-bottom: 2rem;">INDOCILI ORIZZONTI</h2>
+
+                <div class="hero-grid">
+                    <div class="hero-image">
+                        <img src="../assets/Immagini/Passate/Indocili Orizzonti/Locandina Indocili.webp" alt="Exhibition Poster">
+                    </div>
+                    <div class="hero-text">
+                        <div class="event-details column">
+                            <div class="detail-block">
+                                <h3 class="detail-title">La mostra</h3>
+                                <p>La ricerca artistica di Arianna Lazzari si configura come un’indagine profonda sul segno che si fa gesto vivo, una traccia sensibile capace di attraversare e abitare la superficie dell’opera.
+Il suo lavoro non è una semplice esecuzione formale, ma un atto che delinea l’emozione e afferma con forza l'intensità del vivere, liberandosi in un flusso energetico che cerca e conquista il proprio spazio sul supporto. 
+
+Ispiratasi al pittore italiano G. Novelli (1925-1968), secondo cui è essenziale «[…]dimenticare tutto ciò che si è appreso di equilibrio e conoscenza affinché l’atto creativo riacquisti la sua spontaneità[…]», l'artista abbandona gli equilibri prestabiliti e le conoscenze accademiche, permettendo così all'atto creativo di riappropriarsi di una <i>purezza istintiva</i>.
+Questa tensione si traduce in un’osservazione attenta di una natura senza controllo, un microcosmo di energie spontanee che diventano specchio e riflesso delle dinamiche emotive umane.
+L’intento di Arianna è quello di attingere direttamente dalla realtà, esplorandone le profondità e le ambiguità intrinseche per traslarle in visioni cariche di pathos e in nuovi orizzonti interiori.
+In questo processo di trasformazione, la materia stessa gioca un ruolo determinante e attivo: l’uso dell’olio di lino, con la sua capacità di mutare e ingiallire nel corso del tempo, rende
+l'opera un organismo mutevole. Il passare del tempo non è dunque un limite, ma un elemento generativo che riapre costantemente lo sguardo dello spettatore, offrendo nuove e imprevedibili possibilità di lettura.
+Attraverso questo processo, la ricerca segnica dell’artista riesce a riverberare nel vissuto di chi osserva, trasformando la superficie pittorica in un territorio di incontro tra il mondo esterno e la sensibilità più intima.
+</p>
+                                <p style="margin-top: 1rem;"></p>
+                            </div>
+                            <div class="detail-block">
+                                <h3 class="detail-title">L'artista</h3>
+                                <p>Arianna Lazzari - Diplomata all’Accademia di Belle Arti di Bologna, è interessata al segno che diventa gesto vivo, traccia sensibile che attraversa la superficie. Il suo intento principale è trarre spunti dalla realtà, così da esplorarne le profondità e le ambiguità, trasformandole in visioni cariche di emozione e in nuovi orizzonti interiori.
+ Nel corso degli anni ha esposto a Modena, Bologna e Shanghai.
+</p>
+                                <p style="margin-top: 1rem;"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Showcase Section -->
+            <section class="showcase-section">
+                <div class="section-header">
+                    <h2 class="section-title">SHOWCASE</h2>
+                </div>
+
+                <div class="poster-slider-container showcase-slider">
+                    <!-- Showcase Navigation (Side-by-side) -->
+                    <button class="slider-arrow prev slidePrev side-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <button class="slider-arrow next slideNext side-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="poster-grid">
+                        <div class="poster-card active">
+                            <img src="../assets/Immagini/Passate/Indocili Orizzonti/1.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Indocili Orizzonti/2.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Indocili Orizzonti/3.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Indocili Orizzonti/4.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Indocili Orizzonti/5.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Indocili Orizzonti/6.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/Indocili Orizzonti/7.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
