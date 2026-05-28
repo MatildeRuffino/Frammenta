@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le avventure sarde di Gilla | FRAMMENTA</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- Barba.js & GSAP -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+
+<body data-barba="wrapper">
+
+    <main data-barba="container" data-barba-namespace="exhibition">
+        <a href="../past.html" class="back-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <div class="content-wrapper">
+            <!-- Hero Image -->
+            <div class="sub-hero-image">
+                <img src="../assets/Immagini/Passate/l'estate di giorgione/hero.webp" alt="Hero Image">
+            </div>
+
+            <!-- Page Title -->
+            <section class="hero-section" style="padding-top: 0;">
+                <h2 class="section-title big" style="margin-bottom: 2rem;">L'ESTATE DI GIORGIONE</h2>
+
+                <div class="hero-grid">
+                    <div class="hero-image">
+                        <img src="../assets/Immagini/Passate/l'estate di giorgione/Locandina.webp" alt="Exhibition Poster">
+                    </div>
+                    <div class="hero-text">
+                        <div class="event-details column">
+                            <div class="detail-block">
+                                <h3 class="detail-title">La mostra</h3>
+                                <p>Il progetto espositivo "L’estate di Giorgione" nasce dall'incontro tra l'esperienza pedagogica di un percorso di trekking collettivo chiamato La Marcia al Mare e lo sguardo documentaristico del fotografo Bengalli. Al centro di questo racconto si staglia la figura di Giorgio Nolivari, affettuosamente chiamato "Giorgione", colonna portante dell'associazione OTP-Gea.
+
+Giorgione non era soltanto organizzatore e presidente dell’associazione, ma un mentore capace di trasmettere ai giovani una concretezza operativa rara, trasformando le difficoltà pratiche del trekking in occasioni di apprendimento spontaneo. 
+La sua filosofia si opponeva alla moderna tendenza di far crescere le nuove generazioni sotto una protettiva "cupola di vetro". Al contrario, credeva fermamente che solo il confronto pratico con la realtà, e i suoi inevitabili ostacoli, potesse rendere i ragazzi adulti consapevoli e sicuri di sé, infondendo in ognuno la certezza del "Posso farlo anche io".
+
+La serie fotografica di Bengalli, realizzata nell'estate del 2023, segue venticinque adolescenti lungo i sentieri dell'Appennino, immortalando la nascita di nuovi legami, momenti di convivialità e fatiche condivise. Il tutto, però, appare avvolto da un’atmosfera sospesa. 
+La serie fotografica non mostra mai la fine del percorso: il mare. Una scelta deliberata per non dare una conclusione, mantenendola in una dimensione di eterna attesa.
+In coerenza con questa visione, le foto selezionate dal libro sono state tutte realizzate nei punti più alti della montagna. Esse raccontano la salita di Giorgione, il suo vigore, la sua vita. Infatti, senza saperlo, l'obiettivo di Bengalli ha finito per documentare l'ultima settimana di vita di Giorgio, la cui prematura scomparsa avvenne proprio al raggiungimento del mare.
+
+Il percorso espositivo invita dunque a una doppia lettura: da un lato, la celebrazione di un’esperienza educativa che sfida la fragilità moderna attraverso il trekking collettivo; dall’altro, un tributo visivo a un uomo che ha saputo essere un punto di riferimento per i giovani.
+
+</p>
+                                <p style="margin-top: 1rem;"></p>
+                            </div>
+                            <div class="detail-block">
+                                <h3 class="detail-title">L'artista</h3>
+                                <p>Eugenio Bengalli, nato a Fiorenzuola d’Arda nel 2001, si forma presso il Liceo Artistico Bruno Cassinari di Piacenza. Successivamente svolge un periodo di praticantato con il collettivo Cesura, esperienza che consolida le sue basi nella fotografia. Attualmente è studente all’Accademia di Belle Arti di Bologna, dove collabora con collettivi artistici interni come Bar-H e PLai. La sua ricerca fotografica indaga restituendo visibilità a persone, comunità e contesti marginali, portando alla luce narrazioni spesso trascurate nel tessuto sociale contemporaneo. </p>
+                                <p style="margin-top: 1rem;"></p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Showcase Section -->
+            <section class="showcase-section">
+                <div class="section-header">
+                    <h2 class="section-title">SHOWCASE</h2>
+                </div>
+
+                <div class="poster-slider-container showcase-slider">
+                    <!-- Showcase Navigation (Side-by-side) -->
+                    <button class="slider-arrow prev slidePrev side-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <button class="slider-arrow next slideNext side-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="poster-grid">
+                        <div class="poster-card active">
+                            <img src="../assets/Immagini/Passate/l'estate di giorgione/1.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/l'estate di giorgione/2.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/l'estate di giorgione/3.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/l'estate di giorgione/4.webp" alt="">
+                        </div>
+                        <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/l'estate di giorgione/5.webp" alt="">
+                        </div>
+                         <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/l'estate di giorgione/6.webp" alt="">
+                        </div>
+                         <div class="poster-card">
+                            <img src="../assets/Immagini/Passate/l'estate di giorgione/9.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
